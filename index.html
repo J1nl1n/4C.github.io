@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<style>
+        @font-face {
+            font-family: "shanhun";
+            src: url('./file/默陌山魂田格手迹.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: "hanyi";
+            src: url('./file/汉仪尚巍手书简.TTF') format('truetype');
+        }
+</style>
+<body>
+    <div class="container">
+        <div class="bg"></div>
+        <img src="./img/yun1.png" alt="" class="yun1 yun">
+        <img src="./img/yun2.png" alt="" class="yun2 yun">
+        
+        <div class="wrap">
+            <div class="chuanghua"></div>
+            <div class="chuanghua2"></div>
+            <div class="act" style="opacity: 0;font-family: hanyi;color: #832e2c;">开始</div>
+            <img src="./img/zi.png" alt="" class="zi">
+        </div>
+        <div style="color: #d1bd15;font-size: 36px;" class="renyi">
+            — —点击任意处开始— —
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var chuanghua = document.getElementsByClassName('chuanghua')[0];
+    var chuanghua2 = document.getElementsByClassName('chuanghua2')[0];
+    var zi = document.getElementsByClassName('zi')[0];
+    var act = document.getElementsByClassName('act')[0];
+    document.addEventListener('click', function(event) {
+        chuanghua.style.animation = 'roateChuan 2s';
+        chuanghua2.style.animation = 'fanRoate 2s';
+        zi.style.animation = 'xiaoshi 2s';
+        act.style.animation = 'kaishi 2s';
+
+        setTimeout(function(){
+            // 这里写需要进行的操作或者页面跳转逻辑
+            console.log('跳转了')
+            window.location.href = "./contents.html"; 
+        }, 2000); // 设置延迟时间为2秒（单位为毫秒）
+    });
+    window.onload = function(){
+
+    }
+</script>
